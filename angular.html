@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  
+  <body ng-controller="myCtrl">
+    <ricerca></ricerca>
+  </body>
+
+  <script>
+    var app = angular.module('myApp', []);
+    
+    app.controller('myCtrl', ['$scope', 'cerca', function($scope, cerca){
+      $scope.suggerisci = function() { 
+        cerca.then(function(response){
+          $scope.suggerimento = response.data.testo;
+        });
+      };
+    }]);
+  
+  
+    app.directive('ricerca', function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'ricerca.html'
+      };
+    });
+
+    app.factory('cerca', ['$http', function($http){
+      return $http.get('http://www.unihelp.it/file.json')
+        .then(function(data){
+            return data;
+        }, function(err){
+            return err;
+        });
+    }]);
+  </script>
+</html>

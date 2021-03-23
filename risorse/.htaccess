@@ -1,0 +1,5 @@
+AuthName "risorse"
+AuthType Basic
+AuthUserFile /web/htdocs/www.unihelp.it/home/risorse/.htpasswd
+AuthGroupFile /dev/null
+require valid-user

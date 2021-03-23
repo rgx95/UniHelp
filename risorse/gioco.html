@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Briscola</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+        * { font-family: sans-serif; font-size: 1.12em; }
+        
+        div {  
+            border: 3px white solid;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        div#messaggio {
+            position: fixed;
+            top: 10vh; bottom: 10vh;
+            left: 10vw; right: 10vw;
+            width: 80vw;
+            height: 80vh;
+            
+            box-shadow: 0 0 100px 50px black;
+            background: white;
+            
+            padding: 2em;
+            display: inline;
+            box-sizing: border-box;
+        }
+        
+        div#messaggio>div {
+        	display: none;
+        	margin: 0;
+        }
+        
+        div#messaggio>div>not(:first-child) {
+        	
+        	position: absolute;
+        	top: 50%; left: 50%;
+        	transform: translate(-50%, -50%);
+        }
+        
+        div#messaggio>div>span:first-child {
+        	position: absolute;
+        	top: -1em;
+        	left: 1em;
+        	padding: 0 0.25em 0 0.25em;
+        	font-size: 1.5em;
+        	background: white;
+        	border-radius: 10px;
+        	box-shadow: 0px 0px 5px black;
+        }
+        
+        div#messaggio>div>input { 
+        	width: 100%;
+        	margin: 0;
+        	box-sizing: border-box;
+        }
+        
+        div#tavolo {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            min-height: 400px;
+            min-width: 40em;
+            padding: 1em;
+        }
+        
+        div#tavolo > #giocatore {
+            position: relative;
+            min-height: 10em; 
+            width: 27em; 
+            margin: auto;
+            box-shadow: 0 0 2px 0 black;
+        }
+        
+        div#tavolo > div {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            margin: 2em;
+            padding: 1em;
+            min-height: 10em;
+        }        
+        
+        div.carta {
+            width: 120px;
+            height: 200px;
+            background: white;
+            box-shadow: 0 0 2px 0 black;
+        }
+        
+        </style>
+        
+        <script src="gioco.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <div id="tavolo">
+            <div id="terra">
+                <div class="carta" id="carta1">Carta 1</div>
+                <div class="carta" id="carta2">Carta 2</div>
+                <div class="carta" id="mazzo">Mazzo</div>
+                <div class="carta" id="briscola">Briscola</div>                
+            </div>
+            
+            <div id="giocatore">
+                <span style="position: absolute; top:-.9em; left:1em; background: white"> La tua mano </span>
+                <div class="carta" id="giocatore0">Carta 1</div>
+                <div class="carta" id="giocatore1">Carta 2</div>
+                <div class="carta" id="giocatore2">Carta 3</div>
+            </div>   
+        </div>
+        
+        <div id="messaggio">
+            <div id="registrati">
+                <span>Crea lobby</span>
+            	
+            	<label for="nome">Nome giocatore:</label><br><br>
+            	<input name="nome" type="text" maxlength="16"><br>
+            	<input type="button" value="Crea stanza" onclick="crea(this.parentNode.children['nome'].value)">
+            	
+            	<br>
+            	<br>
+            	<hr><span style="position: relative; top: -1.20em; background: white;">&nbsp;oppure&nbsp;</span>
+            	<br>
+            	
+            	<label for="lobby">Inserisci codice lobby:</label><br><br>
+            	<input name="lobby" type="text" maxlength="4"><br>
+            	<input type="button" value="Unisciti" onclick="unisciti(this.parentNode.children['lobby'].value)">
+
+            </div>
+            
+            <div id="lobby">
+                <span>Lobby</span>
+                
+                <ul id="lobby_list" style="list-style: none;">
+                	
+                </ul>
+                
+            </div>
+            
+            <div id="punti">
+                <span>Fine</span>
+                
+                Primo posto: <span id="vincitore"></span>
+            </div>
+        </div>
+        
+        <span id="jsonAnswer">
+            <script></script>
+        </span>
+        
+        <script>
+        	if (leggiGet("lb") !== null && leggiGet("pl") !== null) {
+        		
+        		document.getElementById("lobby").style.display = "inline";
+        		document.getElementById("lobby").innerHTML += "in attesa dell'altro giocatore";
+        		
+        	} else {
+        	
+        		document.getElementById("registrati").style.display = "inline";
+        
+	            try {
+	
+	                var gioco = new Briscola();
+	                
+	                var tavolo = {
+	                    terra: [document.getElementById("carta1"), document.getElementById("carta2")],
+	                    mazzo: document.getElementById("mazzo"),
+	                    briscola: document.getElementById("briscola"),
+	                };
+	                
+	                var tavoloGiocatore = [document.getElementById("giocatore0"), document.getElementById("giocatore1"), document.getElementById("giocatore2")];
+	
+	                tavolo.terra[0].innerHTML = "X";
+	                tavolo.terra[1].innerHTML = "X";
+	                tavolo.mazzo.innerHTML = "O";
+	                tavolo.briscola.innerHTML = gioco.ultimaCarta;
+	                
+	                tavoloGiocatore[0].innerHTML = gioco.mazzoGiocatore1.carte[0];
+	                tavoloGiocatore[1].innerHTML = gioco.mazzoGiocatore1.carte[1];
+	                tavoloGiocatore[2].innerHTML = gioco.mazzoGiocatore1.carte[2];
+	                
+	            } catch (err) {
+	
+	                console.log(err.name + ": " + err.message);
+	
+	            }
+	            
+	            var jsonAnswer = document.getElementById("jsonAnswer");
+	            
+	            /*
+	            window.setInterval(function(){
+	                jsonAnswer.removeChild(jsonAnswer.childNodes[0]);
+	                let node = document.createElement("script");
+	                node.setAttribute("src", "https://unihelp.it/risorse/server_briscola.php?lb=1&pl=1&op=1");
+	                jsonAnswer.appendChild(node);
+	            }, 5000); 
+	            */
+	            
+	            function richiestaCompletata(x) {
+	                window.alert("ricevuto: " + x);
+	            }
+            
+            }
+        </script>
+        
+    </body>
+</html>

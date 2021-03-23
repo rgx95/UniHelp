@@ -1,0 +1,5 @@
+AuthName "protected"
+AuthType Basic
+AuthUserFile /web/htdocs/www.unihelp.it/home/protected/.htpasswd
+AuthGroupFile /dev/null
+require valid-user

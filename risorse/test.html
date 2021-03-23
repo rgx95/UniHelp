@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>untitled</title>
+
+<style>
+	* { color: white; font-weight: bold; font-family: sans-serif; font-size: 1.12em; }
+	
+	div { box-sizing: border-box }
+	
+	div#tavolo {
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		margin:0;
+		height: 100%;
+		min-height: 600px;
+		min-width: 600px;
+		background: darkgreen;
+	}
+	
+	div#tavolo>div{
+		position: absolute;
+		display: flex;
+		flex: row;
+		justify-content: space-around;
+		height: 200px;
+		margin: auto;
+		left: 0; right: 0;
+	}
+	
+	div#tavolo>div#gioco {
+		margin-top: 150px;
+		margin-bottom: 100px;
+		width: 600px;
+	}
+	
+	div#tavolo>div#mano {
+		margin-top: 450px;
+		border: 5px solid white;
+		border-radius: 5px;
+		width: 450px;
+		padding: 0;
+	}
+	
+	span#nomeGiocatore { position: absolute; top: -20px; background: darkgreen; text-align: center; }
+	
+	div#tavolo>div>div {
+		border: 1px solid white;
+		border-radius: 3px;
+		width: 100px;
+		margin: 15px;
+		overflow: hidden;
+	}
+</style>
+
+</head>
+
+<body>
+	<div id="tavolo">
+		<div id="gioco">
+			<div id="carta0">X</div>
+			<div id="carta1">X</div>
+			<div id="mazzo">O</div>
+			<div id="ultimaCarta">briscola</div>
+		</div>
+		
+		<div id="mano">
+			<span id="nomeGiocatore">&nbsp;&nbsp;Giocatore1&nbsp;</span>
+			<div id="carta0">Carta</div>
+			<div id="carta1">Carta</div>
+			<div id="carta2">Carta</div>
+		</div>
+	</div>
+</body>
+</html>
