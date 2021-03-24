@@ -1,435 +1,442 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+  <head>
 
     <!-- TITOLO DELLA PAGINA -->
-        <title>uniHelp</title>
+    <title>uniHelp</title>
 
-        <style type="text/css">
-            * {
-                max-width:100%;
-            }
-            /*<![CDATA[*/
-             body {
-              text-align: center;
-              color: #336699;
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 48px;
-              font-weight: bold;
-            }
-             h2.c1 {
-              color: #CC6600;
-              font-size: 24px;
-              font-weight: lighter;
-            }
-             p.c2 {
-              color: #CC6600;
-              font-size: 13px;
-              font-weight: lighter;
-            }
-            /*]]>*/
-            </style>
+    <style type="text/css">
+      * {
+          max-width:100%;
+      }
+      /*<![CDATA[*/
+        body {
+        text-align: center;
+        color: #336699;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+      }
+        h2.c1 {
+        color: #CC6600;
+        font-size: 24px;
+        font-weight: lighter;
+      }
+        p.c2 {
+        color: #CC6600;
+        font-size: 13px;
+        font-weight: lighter;
+      }
+      /*]]>*/
+    </style>
 
     <!-- META-DATI -->
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta charset="utf-8"> <!-- CHARSET -->
-        <meta name="description" content="uniHelp"> <!-- DESCRIZIONE -->
-        <meta name="keywords" content="uni,university,esami,exams,laurea"> <!-- PAROLE CHIAVE MOTORI DI RICERCA -->
-        <meta name="author" content="Luca Ruggirello, Simone Barandoni"> <!-- AUTORI -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- AGGIUSTO LA VISUALE IN BASE ALLO SCHERMO -->		
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8"> <!-- CHARSET -->
+    <meta name="description" content="uniHelp"> <!-- DESCRIZIONE -->
+    <meta name="keywords" content="uni,university,esami,exams,laurea"> <!-- PAROLE CHIAVE MOTORI DI RICERCA -->
+    <meta name="author" content="Luca Ruggirello, Simone Barandoni"> <!-- AUTORI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- AGGIUSTO LA VISUALE IN BASE ALLO SCHERMO -->		
 
     <!-- LINK UTILI -->
-        <link rel="author" href="" /> <!-- LINK AL SITO DELL'AUTORE -->
-        <link rel="license" href="" /> <!-- LINK ALLE INFO SUL COPYRIGHT -->
-        <link rel="help" href="" /> <!-- LINK A INFO UTILI -->					
+    <link rel="author" href="" /> <!-- LINK AL SITO DELL'AUTORE -->
+    <link rel="license" href="" /> <!-- LINK ALLE INFO SUL COPYRIGHT -->
+    <link rel="help" href="" /> <!-- LINK A INFO UTILI -->					
 
     <!-- ESEGUO IN CASO DI JAVASCRIPT DISABILITATO -->
-        <noscript>
-            <!-- LINK A INFO UTILI SULL'ABILITAZIONE DI JAVASCRIPT -->
-            Per avere a disposizione tutte le funzionalità di questo sito è necessario abilitare
-            Javascript. Qui ci sono tutte le <a href="https://www.enable-javascript.com/it/">
-            istruzioni su come abilitare JavaScript nel tuo browser</a>.
-            <hr>			
-            For full functionality of this site it is necessary to enable JavaScript.
-            Here are the <a href="https://www.enable-javascript.com/">
-            instructions how to enable JavaScript in your web browser</a>.
-        </noscript>
+    <noscript>
+      <!-- LINK A INFO UTILI SULL'ABILITAZIONE DI JAVASCRIPT -->
+      Per avere a disposizione tutte le funzionalità di questo sito è necessario abilitare
+      Javascript. Qui ci sono tutte le <a href="https://www.enable-javascript.com/it/">
+      istruzioni su come abilitare JavaScript nel tuo browser</a>.
+      <hr>			
+      For full functionality of this site it is necessary to enable JavaScript.
+      Here are the <a href="https://www.enable-javascript.com/">
+      instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
 
     <!-- RISORSE ESTERNE -->
-        <link rel="icon" href="img/favicon.gif" type="image/x-icon" /> <!-- FAVICON -->
-        <!-- CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">		
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!-- IMPORTO AWESOME ICONS -->
-        <!-- SCRIPT -->		
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <!-- RISORSE INTERNE -->
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href= "css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/slider-style.css">
-        <!-- SCRIPT -->
+    <link rel="icon" href="img/favicon.gif" type="image/x-icon" /> <!-- FAVICON -->
 
-    </head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">		
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!-- IMPORTO AWESOME ICONS -->
     
-    <body>
-        <header>
-            <!-- NAVBAR -->
+    <!-- SCRIPT -->		
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
+    <!-- RISORSE INTERNE -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href= "css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slider-style.css">
+    
+    <!-- SCRIPT -->
 
-                    <!-- -->
-                    <div class="navbar-header">
-                        <!-- pulsante menù della nav bar collassata -->
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>                        
-                        </button>
-                        
-                        <a class="navbar-brand" href="#">Logo</a>
-                    </div>
+  </head>
+  
+  <body>
+    <header>
+      <!-- NAVBAR -->
 
-                    <!-- navbar effettiva -->
-                    <div class="collapse navbar-collapse" id="myNavbar">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
 
-                        <!-- -->
-                        <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="esame.html">Esami</a></li>
-                            <li><a href="chisiamo.html">Chi Siamo</a></li>
-                            <li><a href="assistenza.html">Assistenza</a></li>
-                            <li><a href="profilo.html">Profilo</a></li>
-                            <li><a href="login.html">Log in</a></li>
-                        </ul>
-                        
-                        <!-- -->
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                            <li><a href="javascript:logout('<?php echo session_id(); ?>')"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li><!-- effettua il logout -->
+          <!-- -->
+          <div class="navbar-header">
+            <!-- pulsante menù della nav bar collassata -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            
+            <a class="navbar-brand" href="#">Logo</a>
+          </div>
 
-                            <script>
-                                function logout(sess_id) {
-                                    let xhttp = new XMLHttpRequest();
+          <!-- navbar effettiva -->
+          <div class="collapse navbar-collapse" id="myNavbar">
 
-                                    xhttp.onreadystatechange = function() {
-                                        if (this.readyState == 4 && this.status == 200) {
-                                            
-                                            window.alert("Log out effettuato, Arrivederci!\r\nResponse: " + xhttp.responseText);
-                                            window.location.replace('/index.php');
-
-                                        } else if (this.readyState == 4 && this.status >= 300) {
-                                            console.log(xhttp.responseText);
-                                            return;
-                                        } 
-                                    };
-                                    
-                                    xhttp.open("get", "server.php?logout=" + sess_id);
-                                    xhttp.send();
-                                }
-                            </script>
-                            
-                            <!-- <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>   apre il modal login -->
-                        
-                        </ul>
-                        
-                    </div>		
-                </div>	
-            </nav>
-            <!-- FINE NAVBAR -->
-
-
-            <!-- squarcio iniziale immagine di sfondo -->
-            <div id="intro" class="view"></div>
-
-        </header> 
-        
-        <style> header { height: 100%; } </style>
-		
-        <!-- <?php //require("modal/import.php");  IMPORTO I MODAL DI BASE (login e profilo) ?> -->
-
-
-            <!--------------------------------------------------------------------------------------
-
-                                                                                    CORPO DELLA PAGINA 
-
-            ---------------------------------------------------------------------------------------->
-
-            <!-- TITOLO DELLA PAGINA -->
-
-            <h1 class="title">uniHelp</h1>
-
-            <!-- CONTENUTO PAGINA -->
-            <div class="container marginetop">
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        <a href="#scroll" ><img  src="img/cerca.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>
-                    </div>
-                    <div class="col-sm-4"> 
-                        <a href="#scroll" ><img src="img/leggi.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="#scroll" ><img src="img/valuta.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>			
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- squarcio immagine di sfondo -->
-            <div class="marginetop">
-                <div class="sfondoSfocato" class="view"></div>
-            </div>
-
-            <!-- inizio FORM di RICERCA -->
-            <div class="container marginetop" >
-
-                <!-- style suggerimenti -->
-                <style>
-                    /*<![CDATA[*/ 
-                    div.tab { display: none; position: relative; padding: 0; margin:auto; max-width: 80% }
-                    
-                    div.suggerimenti_result { display:none; position: absolute; right: 20%; left: 20%; z-index: 99; max-height: 250px; overflow: auto; box-shadow: 0px 2px 5px 2px #cccccc; background: white; }
-                    ul.suggerimenti_result { list-style: none; padding: 0; margin:0 }
-                                        
-                    ul.suggerimenti_result>li { padding:1em; }
-                    ul.suggerimenti_result>hr{ padding:0; margin:0 }
-                    
-                    ul.suggerimenti_result:hover { cursor: pointer }
-                    ul.suggerimenti_result>li:hover { background: #cccccc; color:white;}
-                    
-                    
-                    /* Make circles that indicate the steps of the form: */
-                    .step {
-                      height: 15px;
-                      width: 15px;
-                      margin: 0 2px;
-                      background-color: #bbbbbb;
-                      border: none;
-                      border-radius: 50%;
-                      display: inline-block;
-                      opacity: 0.5;
-                    } /* Mark the active step: */
-                    .step.active {
-                      opacity: 1;
-                    } /* Mark the steps that are finished and valid: */
-                    .step.finish {
-                      background-color: #4CAF50;
-                    }
-                    /*]]>*/
-                </style>
+            <!-- -->
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="esame.html">Esami</a></li>
+              <li><a href="chisiamo.html">Chi Siamo</a></li>
+              <li><a href="assistenza.html">Assistenza</a></li>
+              <li><a href="profilo.html">Profilo</a></li>
+              <li><a href="login.html">Log in</a></li>
+            </ul>
+              
+              <!-- -->
+            <ul class="nav navbar-nav navbar-right">
                 
-                <!-- html form+suggerimenti step-by-step homemade -->
-                <form class="form-group" method="get" action="esame.php" >
-                    <input id="suggerimenti_uni_input_hidden" type="hidden" name="id_uni" >
-                    <input id="suggerimenti_corso_input_hidden" type="hidden" name="id_corso" >
-                    <input id="suggerimenti_esame_input_hidden" type="hidden" name="id_esame" >
-                    
-                    
-                    <h3 style="text-align: left; margin: 0 auto 0 10%">Cerca:</h3>
-                    <br>
+              <li><a href="javascript:logout('<?php echo session_id(); ?>')"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li><!-- effettua il logout -->
 
-                    <div class="tab" >
-                        <div class="suggerimenti_input" class="input-group larghezza" >
-                            <input id="suggerimenti_uni_input" class="form-control " placeholder="Cerca Universit&agrave;" required>
-                        </div>
-                        <div class="suggerimenti_result" >
-                            <ul class="suggerimenti_result" id="suggerimenti_uni" >
+              <script>
+                function logout(sess_id) {
+                  let xhttp = new XMLHttpRequest();
 
-                            </ul>
-                        </div>
-                    </div>
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        
+                      window.alert("Log out effettuato, Arrivederci!\r\nResponse: " + xhttp.responseText);
+                      window.location.replace('/index.php');
 
-                    <div class="tab">
-                        <div class="suggerimenti_input" class="input-group larghezza" >
-                            <input id="suggerimenti_corso_input" class="form-control" placeholder="Cerca corso di laurea.."required>
-                        </div>
-                        <div class="suggerimenti_result">
-                            <ul class="suggerimenti_result" id="suggerimenti_corso">
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tab">
-                        <div class="suggerimenti_input" class="input-group larghezza" >
-                            <input id="suggerimenti_esame_input" class="form-control " placeholder="Cerca esame.." required>
-                        </div>
-                        <div class="suggerimenti_result">
-                            <ul class="suggerimenti_result" id="suggerimenti_esame">
-
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Circles which indicates the steps of the form: -->
-                    <div style="text-align:center;margin-top:40px;">
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
-                    </div>
-
-                    <br>
-
-                    <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn  btn-success margineauto" href="#slideRicerca" role="button"  >Indietro</button>
-                    <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-success margineauto" href="#slideRicerca" role="button" >Avanti</button>
-
-
-                </form>
-
-                <!-- js form step-by-step homemade -->
-                <script>
-                var currentTab = 0; 
-                showTab(currentTab); 
-
-                function showTab(n) {
-
-                  var x = document.getElementsByClassName("tab");
-                  x[n].style.display = "block";
-
-                  if (n == 0) {
-                    document.getElementById("prevBtn").style.display = "none";
-                  } else {
-                    document.getElementById("prevBtn").style.display = "inline";
-                  }
-
-                  if (n == (x.length - 1)) {
-                    document.getElementById("nextBtn").innerHTML = "Cerca";
-                    document.getElementById("nextBtn").addEventListener('click', function(){
-                        this.parentNode.submit();
-                    });
-                  } else {
-                    document.getElementById("nextBtn").innerHTML = "Avanti";
-                  }
-                  
-                  aggiornaStep(n);
-                }
-                
-                function aggiornaStep(n) {
-                  // This function removes the "active" class of all steps...
-                  var i, x = document.getElementsByClassName("step");
-
-                  for (i = 0; i < x.length; i++) {
-                    x[i].className = x[i].className.replace(" active", "");
-                  }
-
-                  //... and adds the "active" class to the current step:
-                  x[n].className += " active";
-                }
-
-                function nextPrev(n) {
-
-                  var x = document.getElementsByClassName("tab");
-
-                  x[currentTab].style.display = "none";
-
-                  currentTab = currentTab + n;
-
-                  showTab(currentTab);
-                }
-                </script>
-
-                <!-- js suggerimenti homemade -->
-                <script>
-
-                mostra_nascondi(1);
-                
-                for ( let x of ['uni', 'corso', 'esame'] ) {
-                  let obj = document.getElementById("suggerimenti_" + x + "_input");
-                  obj.addEventListener("input", function(){ cerca(x, obj.value); });
-                  obj.addEventListener("click", function(){ this.select(); });
-                }
-
-                function seleziona(parent, val, val_id) {
-                    console.log(val);
-                    let id = parent.getAttribute("id");
-                    id += "_input";
-
-                    let obj = document.getElementById(id);
-                    obj.value = val;
-
-                    document.getElementById(id + "_hidden").value = val_id;
-
-                    mostra_nascondi(1);
-                }
-
-                function mostra_nascondi (val) {
-                    let x = document.querySelectorAll("div.suggerimenti_result") //.style.display = "none";
-                    let disp = 'none';
-
-                    if (val === 0) {
-                        disp = 'block';
+                    } else if (this.readyState == 4 && this.status >= 300) {
+                      console.log(xhttp.responseText);
+                      return;
                     } 
-
-                    for (let i = 0; i < x.length; i++) {
-                        x[i].style.display = disp;
-                    }
+                };
+                  
+                  xhttp.open("get", "server.php?logout=" + sess_id);
+                  xhttp.send();
                 }
+              </script>
+                
+              <!-- <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>   apre il modal login -->
+            
+            </ul>
+              
+          </div>		
+        </div>	
+      </nav>
+      <!-- FINE NAVBAR -->
 
-                function cerca(cerca, q) {                
-                    if (cerca === ""){
-                        console.log("param cerca empty");
-                        return;
-                    }
 
-                    let xhttp = new XMLHttpRequest();
+      <!-- squarcio iniziale immagine di sfondo -->
+      <div id="intro" class="view"></div>
 
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                           // Typical action to be performed when the document is ready:
-                           let response = JSON.parse(xhttp.responseText);
+    </header> 
+      
+    <style> header { height: 100%; } </style>
+  
+    <!-- <?php //require("modal/import.php");  IMPORTO I MODAL DI BASE (login e profilo) ?> -->
 
-                           let str = '\r\n';
 
-                           for (let i = 0; i < response.length; i++) {
-                                 str += '<li onclick="seleziona(this.parentElement, this.innerHTML, ' + response[i].id + ')" style="padding-left:0;">';  
-                                 str += response[i].content;
-                                 str += '</li>\r\n' + ((i == (response.length - 1)) ? '\r\n' : '<hr>\r\n');
+    <!--------------------------------------------------------------------------------------
 
-                               document.getElementById('suggerimenti_' + cerca).innerHTML = str;
-                           } 
+                                                                            CORPO DELLA PAGINA 
 
-                           mostra_nascondi(0);
-                           // xhttp.responseText;
-                        } else if (this.readyState == 4 && this.status >= 300) {
-                            console.log(xhttp.responseText);
-                            mostra_nascondi(1);
-                        } 
-                    };
+    ---------------------------------------------------------------------------------------->
 
-                    let query = "cerca=" + cerca;
-                    query += "&q=" + q;
+    <!-- TITOLO DELLA PAGINA -->
 
-                    xhttp.open("GET", "server.php?" + query, true);
-                    xhttp.send();
-                }
+    <h1 class="title">uniHelp</h1>
 
-                </script>
+    <!-- CONTENUTO PAGINA -->
+    <div class="container marginetop">
+      <div class="row">
 
-            </div>
-            <!-- fine FORM di RICERCA -->
+        <div class="col-sm-4">
+          <a href="#scroll" ><img  src="img/cerca.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>
+        </div>
+        <div class="col-sm-4"> 
+          <a href="#scroll" ><img src="img/leggi.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#scroll" ><img src="img/valuta.png" class="img-responsive shadow" style="width:30%; margin: auto;" alt="Image"></a>			
+        </div>
 
-            <!-- squarcio immagine di sfondo -->
-            <div class="marginetop">
-                <div class="sfondoSfocato view"></div>
-            </div>
+      </div>
+    </div>
 
-            <footer class="container" style="display: block; padding: 2.5em; width: 100%; background: #333333; color: white">
-                <br>
-                <em>LSSoft&amp;Co. &copy; 2020 (Pisa) Tutti i diritti riservati.</em>
-                <br>
-            </footer>
+    <!-- squarcio immagine di sfondo -->
+    <div class="marginetop">
+      <div class="sfondoSfocato" class="view"></div>
+    </div>
 
-            <!--------------------------------------------------------------------------------------
+    <!-- inizio FORM di RICERCA -->
+    <div class="container marginetop" >
 
-                                        FINE CORPO DELLA PAGINA 
+    <!-- style suggerimenti -->
+    <style>
+      /*<![CDATA[*/ 
+      div.tab { display: none; position: relative; padding: 0; margin:auto; max-width: 80% }
+      
+      div.suggerimenti_result { display:none; position: absolute; right: 20%; left: 20%; z-index: 99; max-height: 250px; overflow: auto; box-shadow: 0px 2px 5px 2px #cccccc; background: white; }
+      ul.suggerimenti_result { list-style: none; padding: 0; margin:0 }
+                          
+      ul.suggerimenti_result>li { padding:1em; }
+      ul.suggerimenti_result>hr{ padding:0; margin:0 }
+      
+      ul.suggerimenti_result:hover { cursor: pointer }
+      ul.suggerimenti_result>li:hover { background: #cccccc; color:white;}
+      
+      
+      /* Make circles that indicate the steps of the form: */
+      .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+      } /* Mark the active step: */
+      .step.active {
+        opacity: 1;
+      } /* Mark the steps that are finished and valid: */
+      .step.finish {
+        background-color: #4CAF50;
+      }
+      /*]]>*/
+    </style>
+              
+    <!-- html form+suggerimenti step-by-step homemade -->
+    <form class="form-group" method="get" action="esame.php" >
+      <input id="suggerimenti_uni_input_hidden" type="hidden" name="id_uni" >
+      <input id="suggerimenti_corso_input_hidden" type="hidden" name="id_corso" >
+      <input id="suggerimenti_esame_input_hidden" type="hidden" name="id_esame" >
+      
+      
+      <h3 style="text-align: left; margin: 0 auto 0 10%">Cerca:</h3>
+      <br>
 
-            ---------------------------------------------------------------------------------------->
+      <div class="tab" >
+        <div class="suggerimenti_input" class="input-group larghezza" >
+          <input id="suggerimenti_uni_input" class="form-control " placeholder="Cerca Universit&agrave;" required>
+        </div>
+        <div class="suggerimenti_result" >
+          <ul class="suggerimenti_result" id="suggerimenti_uni" >
 
-    </body>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab">
+        <div class="suggerimenti_input" class="input-group larghezza" >
+          <input id="suggerimenti_corso_input" class="form-control" placeholder="Cerca corso di laurea.."required>
+        </div>
+        <div class="suggerimenti_result">
+          <ul class="suggerimenti_result" id="suggerimenti_corso">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab">
+        <div class="suggerimenti_input" class="input-group larghezza" >
+          <input id="suggerimenti_esame_input" class="form-control " placeholder="Cerca esame.." required>
+        </div>
+        <div class="suggerimenti_result">
+          <ul class="suggerimenti_result" id="suggerimenti_esame">
+
+          </ul>
+        </div>
+      </div>
+        
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+
+      <br>
+
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn  btn-success margineauto" href="#slideRicerca" role="button"  >Indietro</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-success margineauto" href="#slideRicerca" role="button" >Avanti</button>
+
+
+    </form>
+
+    <!-- js form step-by-step homemade -->
+    <script>
+      var currentTab = 0; 
+      showTab(currentTab); 
+
+      function showTab(n) {
+
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+
+        if (n == (x.length - 1)) {
+          document.getElementById("nextBtn").innerHTML = "Cerca";
+          document.getElementById("nextBtn").addEventListener('click', function(){
+            this.parentNode.submit();
+          });
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Avanti";
+        }
+        
+        aggiornaStep(n);
+      }
+      
+      function aggiornaStep(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+
+        //... and adds the "active" class to the current step:
+        x[n].className += " active";
+      }
+
+      function nextPrev(n) {
+
+        var x = document.getElementsByClassName("tab");
+
+        x[currentTab].style.display = "none";
+
+        currentTab = currentTab + n;
+
+        showTab(currentTab);
+      }
+    </script>
+
+    <!-- js suggerimenti homemade -->
+    <script>
+
+      mostra_nascondi(1);
+      
+      for ( let x of ['uni', 'corso', 'esame'] ) {
+        let obj = document.getElementById("suggerimenti_" + x + "_input");
+        obj.addEventListener("input", function(){ cerca(x, obj.value); });
+        obj.addEventListener("click", function(){ this.select(); });
+      }
+
+      function seleziona(parent, val, val_id) {
+        console.log(val);
+        let id = parent.getAttribute("id");
+        id += "_input";
+
+        let obj = document.getElementById(id);
+        obj.value = val;
+
+        document.getElementById(id + "_hidden").value = val_id;
+
+        mostra_nascondi(1);
+      }
+
+      function mostra_nascondi (val) {
+        let x = document.querySelectorAll("div.suggerimenti_result") //.style.display = "none";
+        let disp = 'none';
+
+        if (val === 0) {
+          disp = 'block';
+        } 
+
+        for (let i = 0; i < x.length; i++) {
+          x[i].style.display = disp;
+        }
+      }
+
+      function cerca(cerca, q) {                
+        if (cerca === ""){
+          console.log("param cerca empty");
+          return;
+        }
+
+        let xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            let response = JSON.parse(xhttp.responseText);
+
+            let str = '\r\n';
+
+            for (let i = 0; i < response.length; i++) {
+              str += '<li onclick="seleziona(this.parentElement, this.innerHTML, ' + response[i].id + ')" style="padding-left:0;">';  
+              str += response[i].content;
+              str += '</li>\r\n' + ((i == (response.length - 1)) ? '\r\n' : '<hr>\r\n');
+
+              document.getElementById('suggerimenti_' + cerca).innerHTML = str;
+            } 
+
+            mostra_nascondi(0);
+            // xhttp.responseText;
+          } else if (this.readyState == 4 && this.status >= 300) {
+            console.log(xhttp.responseText);
+            mostra_nascondi(1);
+          } 
+        };
+
+        let query = "cerca=" + cerca;
+        query += "&q=" + q;
+
+        xhttp.open("GET", "server.php?" + query, true);
+        xhttp.send();
+      }
+
+    </script>
+
+    </div>
+    <!-- fine FORM di RICERCA -->
+
+    <!-- squarcio immagine di sfondo -->
+    <div class="marginetop">
+      <div class="sfondoSfocato view"></div>
+    </div>
+
+    <footer class="container" style="display: block; padding: 2.5em; width: 100%; background: #333333; color: white">
+      <br>
+      <em>LSSoft&amp;Co. &copy; 2020 (Pisa) Tutti i diritti riservati.</em>
+      <br>
+    </footer>
+
+    <!--------------------------------------------------------------------------------------
+
+                                FINE CORPO DELLA PAGINA 
+
+    ---------------------------------------------------------------------------------------->
+
+  </body>
 </html>
 
-        
+
+
+
