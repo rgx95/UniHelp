@@ -39,19 +39,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- AGGIUSTO LA VISUALE IN BASE ALLO SCHERMO -->		
 
     <!-- LINK UTILI -->
-        <link rel="author" href="" /> <!-- LINK AL SITO DELL'AUTORE -->
-        <link rel="license" href="" /> <!-- LINK ALLE INFO SUL COPYRIGHT -->
-        <link rel="help" href="" /> <!-- LINK A INFO UTILI -->					
+        <link rel="author" href="#!" /> <!-- LINK AL SITO DELL'AUTORE -->
+        <link rel="license" href="#!" /> <!-- LINK ALLE INFO SUL COPYRIGHT -->
+        <link rel="help" href="#!" /> <!-- LINK A INFO UTILI -->					
 
     <!-- ESEGUO IN CASO DI JAVASCRIPT DISABILITATO -->
         <noscript>
             <!-- LINK A INFO UTILI SULL'ABILITAZIONE DI JAVASCRIPT -->
             Per avere a disposizione tutte le funzionalità di questo sito è necessario abilitare
-            Javascript. Qui ci sono tutte le <a href="https://www.enable-javascript.com/it/">
+            Javascript. Qui ci sono tutte le <a href="#!https://www.enable-javascript.com/it/">
             istruzioni su come abilitare JavaScript nel tuo browser</a>.
             <hr>			
             For full functionality of this site it is necessary to enable JavaScript.
-            Here are the <a href="https://www.enable-javascript.com/">
+            Here are the <a href="#!https://www.enable-javascript.com/">
             instructions how to enable JavaScript in your web browser</a>.
         </noscript>
 
@@ -68,7 +68,7 @@
         <script src="https://www.w3schools.com/lib/w3.js"></script>
     <!-- RISORSE INTERNE -->
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href= "css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="css/slider-style.css">
         <!-- SCRIPT -->
 
@@ -90,7 +90,7 @@
                             <span class="icon-bar"></span>                        
                         </button>
                         
-                        <a class="navbar-brand" href="#">Logo</a>
+                        <a class="navbar-brand" href="#!">Logo</a>
                     </div>
 
                     <!-- navbar effettiva -->
@@ -98,18 +98,18 @@
 
                         <!-- -->
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="esame.html">Esami</a></li>
-                            <li><a href="chisiamo.html">Chi Siamo</a></li>
-                            <li><a href="assistenza.html">Assistenza</a></li>
-                            <li><a href="profilo.html">Profilo</a></li>
-                            <li><a href="login.html">Log in</a></li>
+                            <li><a href="#!index">Home</a></li>
+                            <li><a href="#!esame">Esami</a></li>
+                            <li><a href="#!chisiamo">Chi Siamo</a></li>
+                            <li><a href="#!assistenza">Assistenza</a></li>
+                            <li><a href="#!profilo">Profilo</a></li>
+                            <li><a href="#!login">Log in</a></li>
                         </ul>
                         
                         <!-- -->
                         <ul class="nav navbar-nav navbar-right">
                             
-                            <li><a href="javascript:logout('<?php echo session_id(); ?>')"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li><!-- effettua il logout -->
+                            <li><a href="javascript:logout('<!--<?php echo session_id(); ?>-->')"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li><!-- effettua il logout -->
 
                             <script>
                                 function logout(sess_id) {
@@ -119,7 +119,7 @@
                                         if (this.readyState == 4 && this.status == 200) {
                                             
                                             window.alert("Log out effettuato, Arrivederci!\r\nResponse: " + xhttp.responseText);
-                                            window.location.replace('/index.php');
+                                            window.location.replace('/index');
 
                                         } else if (this.readyState == 4 && this.status >= 300) {
                                             console.log(xhttp.responseText);
@@ -127,12 +127,12 @@
                                         } 
                                     };
                                     
-                                    xhttp.open("get", "server.php?logout=" + sess_id);
+                                    xhttp.open("get", "server?logout=" + sess_id);
                                     xhttp.send();
                                 }
                             </script>
                             
-                            <!-- <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>   apre il modal login -->
+                            <!-- <li><a href="#!login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>   apre il modal login -->
                         
                         </ul>
                         
@@ -161,7 +161,7 @@
                 </div>
             </div>        
                 
-<?php if (SESSIONE::attiva()) { ?>
+<!--<?php if (SESSIONE::attiva()) { ?>-->
                 
             <div class="container marginetop">
                 <div class="col-sm-6 col-sm-offset-2" class="view">
@@ -233,7 +233,7 @@
 
                     <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
-                            <h4>Se vuoi aggiungere il tuo corso di laurea <a href="corso.php">clicca qui</a>.</h4>
+                            <h4>Se vuoi aggiungere il tuo corso di laurea <a href="#!corso">clicca qui</a>.</h4>
                         </div>
                     </div> 
 
@@ -241,7 +241,7 @@
 
                     <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
-                            <h4>Per modificare la password <a href="cambiopass.php">clicca qui</a>.</h4>
+                            <h4>Per modificare la password <a href="#!cambiopass">clicca qui</a>.</h4>
                         </div>
                     </div>
 
@@ -254,18 +254,18 @@
             </div>
                 
                 
-<?php } else { ?>
+<!--<?php } else { ?>-->
                 
             <div class="container marginetop">
                 <div class="row">
                     <div style="text-align: center; margin: 5em">
                         <h1>Devi effettuare l'accesso</h1>
-                        <h3>Vai al <a href="login.php" >Login</a></h3>
+                        <h3>Vai al <a href="#!login" >Login</a></h3>
                     </div>
                 </div>
             </div>
                 
-<?php } ?>
+<!--<?php } ?>-->
             
         </div>
         
